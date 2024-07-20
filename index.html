@@ -1,34 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Dentolândia</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-
-<meta name="generator" content="Construct 3">
-	<meta name="author" content="Scirra">
-	<meta name="description" content="Equipe 6 - Bruno Simas, Jordy Silva, Leonardo Fronza, Roberto Oliveira">
-	<link rel="manifest" href="appmanifest.json">
-	<link rel="apple-touch-icon" sizes="128x128" href="icons/icon-128.png">
-	<link rel="apple-touch-icon" sizes="256x256" href="icons/icon-256.png">
-	<link rel="icon" type="image/png" href="icons/icon-256.png">
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatador de Strings</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div id="fb-root"></div>
-
-	<noscript>
-		<div id="notSupportedWrap">
-			<h2 id="notSupportedTitle">This content requires JavaScript</h2>
-			<p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
-			<p class="notSupportedMessage">This content was created in Construct 3 - a <a href="https://www.construct.net/en">free game creator</a>.</p>
-		</div>
-	</noscript>
-	<script src="scripts/supportcheck.js"></script>
-	<script src="scripts/offlineclient.js"></script>
-	<script src="scripts/main.js"></script>
-	<script src="scripts/register-sw.js"></script>
+    <div class="container">
+        <h1>Formatador de Strings</h1>
+        <div class="form-group">
+            <label for="nome">Nome do Cliente:</label>
+            <input type="text" id="nome">
+        </div>
+        <div class="form-group">
+            <label for="tipoDocumento">Tipo de Documento:</label>
+            <select id="tipoDocumento">
+                <option value="">Escolha</option>
+                <option value="CPF">CPF</option>
+                <option value="CNPJ">CNPJ</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="acao">Ação:</label>
+            <select id="acao">
+                <option value="">Escolha</option>
+                <option value="SOLICITA">Solicitar</option>
+                <option value="RELATA">Relatar</option>
+            </select>
+        </div>
+        <div id="detalhesAcao"></div>
+        <div id="resultado"></div>
+    </div>
+    <script src="enums.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
