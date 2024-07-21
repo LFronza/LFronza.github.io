@@ -1,23 +1,67 @@
 /* styles.css */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+}
+
+body.light-theme {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+body.dark-theme {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+#toggle-theme {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#toggle-theme:hover {
+    background-color: #1558b0;
+}
+
+body.dark-theme #toggle-theme {
+    background-color: #8ab4f8;
+    color: #333;
+}
+
+body.dark-theme #toggle-theme:hover {
+    background-color: #669df6;
 }
 
 .container {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #1e1e1e;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+body.dark-theme .container {
+    background-color: #444;
+    color: #f5f5f5;
 }
 
 h1 {
     text-align: center;
     margin-bottom: 20px;
+    color: #1a73e8;
+}
+
+body.dark-theme h1 {
+    color: #8ab4f8;
 }
 
 .form-group {
@@ -27,21 +71,130 @@ h1 {
 label {
     display: block;
     margin-bottom: 5px;
+    font-weight: 500;
 }
 
 input[type="text"], select {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     box-sizing: border-box;
-    background-color: #333;
-    color: #e0e0e0;
-    border: 1px solid #444;
+    background-color: #f1f3f4;
+    color: #333;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+body.dark-theme input[type="text"], body.dark-theme select {
+    background-color: #555;
+    color: #f5f5f5;
+    border: 1px solid #666;
 }
 
 #resultado {
     margin-top: 20px;
     padding: 10px;
-    background-color: #333;
-    border: 1px solid #444;
+    background-color: #f1f3f4;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
     white-space: pre-wrap; /* Preserve quebras de linha */
+}
+
+body.dark-theme #resultado {
+    background-color: #555;
+    border: 1px solid #666;
+}
+
+.bloco {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #e8f0fe;
+    border: 1px solid #d2e3fc;
+    border-radius: 8px;
+    position: relative;
+}
+
+body.dark-theme .bloco {
+    background-color: #666;
+    border: 1px solid #888;
+}
+
+.delete-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #d93025;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #c5221f;
+}
+
+.add-porta-button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-porta-button:hover {
+    background-color: #1558b0;
+}
+
+body.dark-theme .add-porta-button {
+    background-color: #8ab4f8;
+    color: #333;
+}
+
+body.dark-theme .add-porta-button:hover {
+    background-color: #669df6;
+}
+
+.solicitacao-select {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f1f3f4;
+    color: #333;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+body.dark-theme .solicitacao-select {
+    background-color: #555;
+    color: #f5f5f5;
+    border: 1px solid #666;
+}
+
+/* Estilização das checkboxes e labels no padrão Google */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    accent-color: #1a73e8;
+}
+
+body.dark-theme .checkbox-container input[type="checkbox"] {
+    accent-color: #8ab4f8;
+}
+
+.checkbox-container label {
+    font-size: 16px;
+    color: inherit;
 }
